@@ -1,0 +1,11 @@
+# Full configuration reference: https://github.com/csarrazi/CsaGuzzleBundle/blob/2.x/src/Resources/doc/configuration_reference.md#configuration-reference
+# Available client config options: http://docs.guzzlephp.org/en/latest/quickstart.html#creating-a-client
+# and http://docs.guzzlephp.org/en/latest/request-options.html
+# config/packages/csa_guzzle.yaml
+csa_guzzle:
+    profiler: '%kernel.debug%' # Actif que en mode debug (dev ou test par exemple)
+    logger: true # Logguer toutes les requêtes
+    clients: # Un client pour l'API Chuck Norris
+        chucknorris_api:
+            config:
+                base_uri: https://api.chucknorris.io
