@@ -1,9 +1,11 @@
 <h2> My favorites</h2>
 
 {% if favorites is not empty %}
-    {% for favorite in favorites %}
-
-    {% endfor %}
+    <ul>
+        {% for favorite in favorites %}
+            <li><p>{{ favorite.quote }}</p> <a href="{{ favorite.link }}">Original Link</a></li>
+        {% endfor %}
+    </ul>
 {% else %}
     <p>You don't have any favorites ! <br>
         You should consider adding some !</p>

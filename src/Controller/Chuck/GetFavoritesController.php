@@ -27,18 +27,4 @@ class GetFavoritesController extends AbstractController
     {
         return $this->render('favorites.html.twig', ['favorites' => $session->get('favorites')]);
     }
-
-//    public function initChuckMenu(RouterInterface $router): Response
-//    {
-//        $routes = [];
-//        foreach ($router->getRouteCollection() as $route) {
-//            if (!in_array(Request::METHOD_GET, $route->getMethods()) || !empty($route->compile()->getVariables())) {
-//                continue;
-//            }
-//
-//            $routes[] = $route;
-//        }
-//
-//        return $this->render('chuck/_menu.html.twig', ['routes' => $routes]);
-//    }
 }
