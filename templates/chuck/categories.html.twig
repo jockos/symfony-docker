@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h2>Quote categories</h2>
+
+    <div>
+        <ul>
+            {% for category in categories %}
+                <li><a href="{{ path('app_chuck_getcategory__invoke', {category: category}) }}">{{ category|capitalize }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
