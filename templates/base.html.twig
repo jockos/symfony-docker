@@ -14,7 +14,7 @@
 <body>
 {% block body %}
     {% block navbar %}
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark {{ app.session.flashbag.peek('success')|length > 0 ? '' : 'mb-4' }}">
             <a class="navbar-brand" href="#">Chuck App</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                     aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +31,12 @@
             </div>
         </nav>
     {% endblock %}
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     <main role="main">
         <div class="container">
