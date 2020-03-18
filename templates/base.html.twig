@@ -22,10 +22,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ path('app_home__invoke') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ path('app_chuck_getcategories__invoke') }}">Categories</a>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_home__invoke') }}">{{ 'home'|trans|capitalize }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_chuck_getcategories__invoke') }}">{{ 'categories'|trans|capitalize }}</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{ path('app_chuck_getrandom__invoke') }}">Random</a>
+                    <li class="nav-item"><a class="nav-link" href="{{ path('app_chuck_getrandom__invoke') }}">{{ 'random'|trans|capitalize }}</a>
                     </li>
                 </ul>
             </div>

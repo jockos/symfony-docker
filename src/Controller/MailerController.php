@@ -28,7 +28,7 @@ class MailerController extends AbstractController
                 ->from('hello@example.com')
                 ->to($formData['to'])
                 ->subject('Check thoses Chuck Norris Quote(s) !')
-                ->html($this->renderView('mail/shareMyFavorites.html.twig', ['favorites' => $session->get('favorites')]))
+                ->html($this->renderView('mail/shareMyFavorites.html.twig', ['favorites' => $session->get('favorites'), 'from' => $formData['from']]))
             ;
 
             $mailer->send($email);
