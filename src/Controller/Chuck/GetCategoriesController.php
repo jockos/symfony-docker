@@ -29,5 +29,4 @@ class GetCategoriesController extends AbstractController
 
         return $this->render('chuck/categories.html.twig', ['categories' => $categories]);
     }
-
 }
